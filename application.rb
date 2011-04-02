@@ -1,5 +1,5 @@
 # require 'haml'
-gem 'sinatra', '= 1.0'
+gem 'sinatra', '= 1.2.1'
 require 'sinatra/base'
 # require 'config/database'
 require 'haml'
