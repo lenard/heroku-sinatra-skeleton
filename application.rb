@@ -1,7 +1,7 @@
 # require 'haml'
 gem 'sinatra', '= 1.0'
 require 'sinatra/base'
-require 'config/database'
+# require 'config/database'
 require 'haml'
 require 'sass'
 
@@ -23,6 +23,11 @@ class SkeletonApp < Sinatra::Base
         link_to text, url
       end
     end
+    
+    def img(name, classes="")
+      "<img src='images/#{name}' alt='#{name}' class=>'#{classes}'/>"
+    end
+    
   end
 
   # SASS stylesheet
@@ -39,19 +44,20 @@ class SkeletonApp < Sinatra::Base
     haml :about, :layout => :'layouts/default'
   end
 
-  get '/form' do
-    %{ <form action="/name" method="post">
-          <input name="person" type="text">
-          <input type="submit">
-       </form> }
-  end
-
-  post '/name' do
-    haml "Hello #{ params[:person] }", :layout => :'layouts/default'
-  end
-
-  get "/user/:id" do
-    "You're looking for user with id #{ params[:id] }"
-  end
+  # left in as example code
+  # get '/form' do
+  #   %{ <form action="/name" method="post">
+  #         <input name="person" type="text">
+  #         <input type="submit">
+  #      </form> }
+  # end
+  #
+  # post '/name' do
+  #   haml "Hello #{ params[:person] }", :layout => :'layouts/default'
+  # end
+  # 
+  # get "/user/:id" do
+  #   "You're looking for user with id #{ params[:id] }"
+  # end
 end
 
