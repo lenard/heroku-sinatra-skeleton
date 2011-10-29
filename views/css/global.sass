@@ -1,3 +1,19 @@
+@import reset
+@import hashgrid
+@import grid-960
+@import handheld
+@import print
+
+
+
+// MY STUFF -------------------------------------------------------
+
+
+$light_pink: #F9C3D4
+$dark_brown: #1C0A05
+$logo_pink: #EB95A9
+
+
 $default_rounding: 3px
 
 =top_rounding($rounding: $default_rounding)
@@ -35,32 +51,30 @@ $default_rounding: 3px
 
 
 
-// TEMP HELPER CLASSES ---------------------------------------------------------------
 
-.blue
-  border: 1px solid blue
+// DESIGN HELPER CLASSES STUFF -------------------------------------------------------
 
-.brown
-  border: 1px solid brown
+.clearfix
+  clear: both
+.justify
+  text-align: justify
 
-.red
+.brown_b
+  border: 1px solid $dark_brown
+.red_b
   border: 1px solid red
-
-.yellow
+.yellow_bg
   background-color: yellow
   
-.hide
+.hidden
   display: none !important
-
 .left
   float: left
-
 .right
   float: right
+.center
+  text-align: center
 
 .bold
   font-weight: bold
-
-.center
-  text-align: center
 
